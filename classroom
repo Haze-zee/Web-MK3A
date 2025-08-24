@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Karier Cerdas - Online Course</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+<header class="navbar">
+  <div class="logo">
+    <img src="images/logo.png" alt="Logo Website">
+  </div>
+
+  <nav class="nav-menu">
+    <ul>
+      <li><a href="home.html" class="active">Home</a></li>
+      <li><a href="classroom.html">Classroom</a></li>
+      <li><a href="program.html">Program</a></li>
+    </ul>
+  </nav>
+
+  <div class="nav-btn">
+    <a href="#" class="btn-primary">Buat Akun</a>
+  </div>
+</header>
+
+  <!-- OUR SERVICE -->
+<section class="banner">
+  <img src="images/banner-job.png" alt="Our Service Banner">
+</section>
+
+  <!-- DAFTAR KELAS -->
+  <section class="courses">
+    <h2>Daftar Kelas</h2>
+    <div class="course-grid">
+      <!-- 1 -->
+      <div class="course-card">
+        <img src="images/course-design.jpg" alt="Desain Grafis Dasar">
+        <h3>Desain Grafis Dasar</h3>
+        <p>Rp 1.000.000</p>
+        <a href="#" class="btn-learn">Learn Now</a>
+      </div>
+      <!-- 2 -->
+      <div class="course-card">
+        <img src="images/course-digitalart.jpg" alt="Digital Art">
+        <h3>Digital Art</h3>
+        <p>Rp 1.000.000</p>
+        <a href="#" class="btn-learn">Learn Now</a>
+      </div>
+      <!-- 3 -->
+      <div class="course-card">
+        <img src="images/course-bisnis.jpg" alt="Manajemen Bisnis">
+        <h3>Manajemen Bisnis</h3>
+        <p>Rp 1.000.000</p>
+        <a href="#" class="btn-learn">Learn Now</a>
+      </div>
+          <!-- 4 -->
+      <div class="course-card">
+        <img src="images/course-pemrograman.jpg" alt="Pemrograman Python">
+        <h3>Pemrograman Python</h3>
+        <p>Rp 1.000.000</p>
+        <a href="#" class="btn-learn">Learn Now</a>
+      </div>
+      <!-- 5 -->
+      <div class="course-card">
+        <img src="images/course-digitalart.jpg" alt="UI/UX Design">
+        <h3>UI/UX Design</h3>
+        <p>Rp 1.000.000</p>
+        <a href="#" class="btn-learn">Learn Now</a>
+      </div>
+      <!-- 6 -->
+      <div class="course-card">
+        <img src="images/course-bisnis.jpg" alt="Video Editing Profesinal">
+        <h3>Video Editing Profesinal</h3>
+        <p>Rp 1.000.000</p>
+        <a href="#" class="btn-learn">Learn Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-left">
+    <p><strong>Belajar hari ini, raih karier impian esok hari.</strong></p>
+    <small>&copy; 2025 OnlineClass | All Rights Reserved</small>
+  </div>
+
+  <div class="footer-right">
+    <!-- contoh icon sosmed (pakai gambar/svg/fontawesome) -->
+    <a href="#"><img src="images/icon-instagram.png" alt="Instagram"></a>
+    <a href="#"><img src="images/icon-facebook.png" alt="Facebook"></a>
+  </div>
+</footer>
+
+</body>
+</html>
