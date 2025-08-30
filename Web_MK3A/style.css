@@ -1,0 +1,556 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+a { text-decoration: none; }
+
+.btn-primary {
+  background: #ffcc00;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #000;
+}
+
+.btn-secondary {
+  background: #f5f5f5;
+  padding: 8px 16px;
+  border-radius: 6px;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+/* ==== HEADER ==== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 50px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 70px; /* atur ukuran logo */
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 100px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  font-size: 19px;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li a.active {
+  font-weight: bold;
+  color: #000;
+}
+
+.btn-primary {
+  background: #ffeb3b;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #ffd600;
+}
+
+.hero-grid {
+  background: url("square\ grid\ background.png") repeat; /* ganti dengan nama file grid kamu */
+  padding: 60px 30px 20px 30px;
+  width: 100%;
+  height: auto; 
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.highlight-pink {
+  color: #e48dd3; /* pink */
+}
+
+.highlight-blue {
+  color: #00bfff; /* biru muda */
+}
+
+.hero-content p {
+  max-width: 700px;
+  margin: 20px auto;
+  color: #555;
+}
+
+.btn-primary {
+  background: #ffeb3b;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 15px;
+  color: #000;
+}
+
+.btn-primary:hover {
+  background: #ffd600;
+}
+
+.banner {
+  width: 100%;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.banner img {
+  width: 100%;       /* Biar lebar gambar mengikuti layar */
+  height: auto;      /* Tingginya otomatis */
+  border-radius: 12px; /* Kalau mau sudut melengkung */
+}
+
+.class-category {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.class-category h2 {
+  margin-bottom: 5px;
+}
+
+.class-category p {
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.class-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1000px;
+  margin: 0 auto 30px auto;
+}
+
+.class-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.class-card:hover {
+  transform: translateY(-5px);
+}
+
+.class-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.class-info {
+  padding: 15px;
+}
+
+.class-info h3 {
+  font-size: 1rem;
+  margin: 10px 0 5px 0;
+}
+
+.class-info p {
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.btn-learn {
+  display: inline-block;
+  padding: 8px 15px;
+  background: #ffeb3b;
+  color: #000;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.btn-learn:hover {
+  background: #ffd600;
+}
+
+.see-all {
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.collab {
+  padding: 40px;
+  text-align: center;
+  background: #fafafa;
+  font-size: 25px;
+}
+
+:root{
+  /* Ubah-ubah variabel ini sesuai kebutuhan */
+  --gap: 32px;          /* jarak antar item */
+  --item-height: 64px;  /* tinggi gambar/logo */
+  --duration: 25s;      /* kecepatan slider (kecil = lebih cepat) */
+}
+
+/* Pembungkus */
+.infinite-slider{
+  width: 100%;
+  padding: 20px 0;
+  background: #fff; /* ubah jika perlu */
+}
+
+/* Area yang memotong (viewport) + efek fade kiri/kanan (optional) */
+.slider-mask{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent 0, black 60px, black calc(100% - 60px), transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0, black 60px, black calc(100% - 60px), transparent 100%);
+}
+
+/* Track yang bergerak */
+.slider-track{
+  display: flex;
+  align-items: center;
+  gap: var(--gap);
+  /* Kunci untuk loop mulus */
+  width: max-content;
+  animation: scrollX var(--duration) linear infinite;
+}
+
+/* Item/gambar */
+.slider-track li{
+  list-style: none;
+  flex: 0 0 auto;   /* jangan dipaksa melebar */
+  display: grid;
+  place-items: center;
+  padding: 8px 16px;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,.06);
+}
+
+.slider-track img{
+  height: var(--item-height);
+  width: auto;
+  display: block;
+  object-fit: contain;
+  filter: saturate(1); /* bisa kamu ubah */
+  transition: transform .2s ease;
+}
+
+.slider-track li:hover img{
+  transform: scale(1.06);
+}
+
+/* Animasi jalan ke kiri.
+   Karena kita menduplikasi set A → set B,
+   kita geser tepat sepanjang lebar set A */
+@keyframes scrollX{
+  from { transform: translateX(0); }
+  to   { transform: translateX(calc(-50%)); }
+}
+
+/* Responsif kecil */
+@media (max-width: 640px){
+  :root{
+    --gap: 16px;
+    --item-height: 44px;
+    --duration: 20s;
+  }
+}
+
+.job-list {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.job-list h2 {
+  margin-bottom: 5px;
+}
+
+.job-list p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.job-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap; /* biar responsif */
+  margin-bottom: 30px;
+}
+
+.job-card {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 250px;
+  background: #fff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+}
+
+.job-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.job-card h3 {
+  font-size: 1rem;
+  margin: 10px 0 5px 0;
+}
+
+.job-card p {
+  font-size: 0.9rem;
+  margin: 4px 0;
+}
+
+.btn-book {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #ffeb3b;
+  color: #000;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 0.9rem;
+}
+
+.btn-book:hover {
+  background: #ffd600;
+}
+
+.see-more {
+  display: inline-block;
+  font-weight: bold;
+  color: #333;
+}
+
+.class-see-more :hover{
+  text-decoration: underline;
+  color: #ffcc00;
+}
+
+.site-footer {
+  background: #ffeb3b;  /* warna kuning */
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between; /* kiri & kanan */
+  align-items: center;
+}
+
+.footer-left p {
+  margin: 0;
+  font-weight: bold;
+  color: #333;
+}
+
+.footer-left small {
+  display: block;
+  margin-top: 5px;
+  color: #444;
+}
+
+.footer-right a {
+  margin-left: 15px;
+}
+
+.footer-right img {
+  width: 24px;
+  height: 24px;
+}
+
+
+/*classroom page*/
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Banner */
+.banner {
+  width: 100%;
+  text-align: center;
+  margin: 30px 0;
+}
+
+.banner img {
+  width: 100%;       /* Biar lebar gambar mengikuti layar */
+  height: auto;      /* Tingginya otomatis */
+  border-radius: 12px; /* Kalau mau sudut melengkung */
+}
+
+/* COURSES */
+.courses {
+  padding: 70px;
+}
+
+.courses h2 {
+  margin-bottom: 20px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.course-card {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+
+.course-card img {
+  width: 100%;
+  border-radius: 8px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.course-card h3 {
+  margin: 10px 0;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.btn-learn {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 15px;
+  background: #ffeb3b;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+/*program page*/
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #fff;
+      color: #333;
+    }
+
+
+    /* Hero Section */
+    .hero-dot {
+      background: url("dotted\ paper\ background.png") repeat;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .hero-dot h1 {
+      font-size: 40px;
+      line-height: 1.4;
+    }
+
+    .hero-dot h1 span.job {
+      color: #39c;
+    }
+
+    .hero-dot h1 span.skill {
+      color: #e48dd3;
+    }
+
+    /* Card Container */
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px 50px;
+    }
+
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #fff;
+    }
+
+    .card img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      }
+
+    .card button {
+      align-self: flex-start;
+      padding: 6px 14px;
+      border: none;
+      border-radius: 6px;
+      background-color: #ffeb3b;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .card button:hover {
+     background: #ffd600;
+}
